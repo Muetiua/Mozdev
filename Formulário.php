@@ -1,27 +1,24 @@
 <?php
+// Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obter o email do formulário
     $email = $_POST["email"];
-    var_dump($_POST); // Exibe os dados do formulário para depuração
 
-    
-    // Validação básica do endereço de e-mail
+    // Valide o email (você pode adicionar validações mais complexas aqui)
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Abra um arquivo de texto para armazenar os e-mails
-        $arquivo = fopen("emails.txt", "a");
+        // Abra ou crie um arquivo para armazenar os emails
+        $arquivo = "emails.txt";
+        $conteudo = file_get_contents($arquivo);
 
-        // Escreva o endereço de e-mail no arquivo
-        fwrite($arquivo, $email . "\n");
+        // Adicione o novo email ao conteúdo existente
+        $conteudo .= $email . "\n";
 
-        // Feche o arquivo
-        fclose($arquivo);
+        // Salve o conteúdo no arquivo
+        file_put_contents($arquivo, $conteudo);
 
-        // Redirecione de volta para a página do formulário ou exiba uma mensagem de sucesso
-        header("Location: Formulário.html");
-        exit();
+        echo "Email armazenado com sucesso!";
     } else {
-        // Redirecione de volta para o formulário com uma mensagem de erro
-        header("Location: Formulário.html?erro=1");
-        exit();
+        echo "Por favor, insira um email válido.";
     }
 }
 ?>
