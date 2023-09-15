@@ -16,11 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         fclose($arquivo);
 
         // Redirecione de volta para a página do formulário ou exiba uma mensagem de sucesso
-        header("Location: formulario.html");
+        header("Location: Formulário.html");
         exit();
     } else {
         // Redirecione de volta para o formulário com uma mensagem de erro
-        header("Location: formulario.html?erro=1");
+        header("Location: Formulário.html?erro=1");
         exit();
     }
 }
