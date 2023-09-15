@@ -2,7 +2,7 @@
 // Verifica se o método de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obter o email do formulário
-    $email = $_POST["email"];
+    $email = $_POST["Formulário.html"];
 
     // Valide o email (você pode adicionar validações mais complexas aqui)
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
