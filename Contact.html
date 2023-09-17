@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DevMoz</title>
-
-   <style>
-       body{background-color:#3b5998;}</style>
-  
+    <title>Contato</title>
 </head>
 <body>
-  <p> nos oferecemos cursos de porogramacao frent end e back and, os interecados poderam nos contatar pelo:</p>
-  <aside id="sidebar">
-          <div class="dark">
-            <h1>Deixa a sua mensagem aqui</h1>
-            <form class="quote">
-  						<div>
-  							<label>Name</label><br>
-  							<input type="text" placeholder="Name">
-  						</div>
-  						<div>
-  							<label>Email</label><br>
-  							<input type="email" placeholder="Email Address">
-  						</div>
-  						<div>
-  							<label>Message</label><br>
-  							<textarea placeholder="Message"></textarea>
-  						</div>
-  						<button class="button_1" type="submit">Send</button>
-					</form>
-          </div>
-        </aside>
+    <h1>Entre em Contato</h1>
+    <p>Envie-nos uma mensagem ou entre em contato pelos meios abaixo:</p>
+    
+    <form action="Formulario.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <p>Telefone: <a href="tel:+258850512922</a></p>
+    
+    <address>
+        Endereço: Nova-chaves, <br>
+        Rapale,<br>
+        estrada n⁰: 13
+    </address>
+    
+    <p>Siga-nos nas redes sociais: <a href="https://www.facebook.com/jeremias Muetiua">Facebook</a>, <a href="https://TikTok.com/@muetiua">TikTok</a></p>
+</body>
+</html>
   
   
   <a href="dev.html">home</a>
   <a href="About.html">About</a>
-  <a href="Contact.html">Contact</a>
   <a href="Services.html">Services</a>
   <footer>
       <p>Jeremias Muetiua, Copyright &copy; 2023</p>
