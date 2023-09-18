@@ -27,6 +27,21 @@
     <button type="submit">Send</button>
   </p>
 </form>
+<h1>Área Restrita</h1>
+    <p>Esta é uma área restrita do site.</p>
+
+    <div id="login-form" style="display: none;">
+        <h2>Login</h2>
+        <button onclick="loginWithNetlify()">Entrar com Netlify Identity</button>
+    </div>
+
+    <div id="restricted-content" style="display: none;">
+        <h2>Conteúdo Restrito</h2>
+        <p>Bem-vindo à área restrita.</p>
+        <button onclick="logout()">Sair</button>
+    </div>
+
+    
     
     <p>Telefone: <a href="tel:+258850512922">+258850512922 </a></p>
     
@@ -37,8 +52,7 @@
     </address>
     
     <p>Siga-nos nas redes sociais: <a href=" https://www.facebook.com/jeremias.muetiua.5">Facebook</a>, <a href="https://TikTok.com/@muetiua">TikTok</a></p>
-</body>
-</html>
+
   
   
   <a href="dev.html">home</a>
@@ -46,6 +60,24 @@
   <a href="Services.html">Services</a>
   <footer>
       <p>Jeremias Muetiua, Copyright &copy; 2023</p>
-  
+    <script src="javascript
+// Configure o Netlify Identity
+netlifyIdentity.init();
+
+function loginWithNetlify() {
+    netlifyIdentity.open(); // Abre a janela de login do Netlify Identity
+}
+
+// Ouça o evento de autenticação bem-sucedida
+netlifyIdentity.on("login", (user) => {
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("restricted-content").style.display = "block";
+});
+
+function logout() {
+    netlifyIdentity.logout(); // Desconecta o usuário
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("restricted-content").style.display = "none";
+}"></script>
   </body>
   </html>
