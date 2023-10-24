@@ -299,6 +299,26 @@ href="Dev.html">Dev</a></li>
  <a href="privacidade.html">privacidade</a>
 <a href="termo de uso.html">termo de uso</a>
 </footer> 
+   <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#000"
+                    },
+                    "button": {
+                        "background": "#f1d600"
+                    }
+                },
+                "content": {
+                    "message": "Este site utiliza cookies para garantir a melhor experiência.",
+                    "dismiss": "Aceitar",
+                    "link": "Saiba mais",
+                    "href": "/politica-de-privacidade" // Link para a sua política de privacidade
+                }
+            });
+        });
+    </script>
  </body>
 
   </html>
